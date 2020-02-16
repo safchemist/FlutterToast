@@ -12,20 +12,6 @@ class Fluttertoast {
   static const MethodChannel _channel =
       const MethodChannel('PonnamKarthik/fluttertoast');
 
-  // for Version 4.x.x
-
-  // static Fluttertoast _instance;
-
-  // static Fluttertoast get instance {
-  //   if (_instance == null) {
-  //     _instance =Fluttertoast._create();
-  //   }
-  //   return _instance;
-  // }
-
-  // Fluttertoast._create(){
-  // }
-
   static Future<bool> cancel() async {
     bool res = await _channel.invokeMethod("cancel");
     return res;
